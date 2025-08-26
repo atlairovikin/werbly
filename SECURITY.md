@@ -18,4 +18,4 @@ Please report a vulnerability using the 'issues' tab on the github page at "inse
 #"Tell them where to go, how often they can expect to get an update on a reported vulnerability, what to expect if the vulnerability is accepted or declined, etc.":
 There are likely going to be vulnerabilities as a baseline; We're dealing with Homebrew.
 Dispite this, I will do what I can (within realistic expectations) to solve as many as I can, when I can.
-That is to say: I'll get to it, but it may take a while
+That is to say: I'll get to it, but it may take a while.
