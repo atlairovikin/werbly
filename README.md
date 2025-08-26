@@ -16,4 +16,4 @@ To install, follow the following instructions:
    to your shell profile. If you do not already have a shell profile, then create one using:
    `touch "${HOME}/.profile"`
 
-To uninstall, simply delete the '.werb' file at your home directory and remove the line `. "${HOME}/.werb/signpost.sh"` from your shell profile
+To uninstall, simply delete the '.werb' file at your home directory and remove the line `. "${HOME}/.werb/signpost.sh"` from your shell profile.
