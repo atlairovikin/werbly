@@ -1,12 +1,12 @@
 #!/bin/sh
 
 #variable that script uses to determine the location of the "main" folder
-export 'a_playground_dir'="${HOME}/.werb"
+export 'a_playground_dir'="${HOME}/werbly"
 
 #variable that script uses to determine the location of the "install to" folder
 export 'a_sandbox_dir'="${a_playground_dir}/the_brewery"
 #variable that script uses to determine the location of the 'script' folder
-export 'a_script_dir'="${a_playground_dir}/the_script_shack"
+export 'a_script_dir'="${a_playground_dir}"
 
 #variable that script uses to determine the location of the "applications" folder
 export 'an_app_dir'="${HOME}/Applications"
