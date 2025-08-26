@@ -3,6 +3,7 @@ A homebrew isolator, with the goal to circumvent Homebrew's innate security conc
 
 ## !
 In doing so, it un-simplifies much of Homebrew's machinations. Do not use if you're unfamiliar with Homebrew or Command Line Interfaces.
+Please also note that the command line's name is 'werb', not werbly, and should be called as such.
 
 
 ## install/uninstall
