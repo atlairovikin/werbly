@@ -6,7 +6,7 @@ In doing so, it un-simplifies much of Homebrew's machinations. Do not use if you
 This is only suported on MacOS.
 Similar to Homebrew, Werbly is rolling release. That means only the current release is suported. However, this is subject to exception at my discretion.
 
-## (un)install
+## install/uninstall
 MacOS comes installed with an older version of git, which may be used to install werbly's command line.
 
 To install, follow the following instructions:
