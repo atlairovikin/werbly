@@ -1,5 +1,5 @@
 # Werbly
-A homebrew isolator, with the goal to circumvent Homebrew's innate security concerns.
+A homebrew isolator, with the goal to circumvent Homebrew's innate security concerns using built-in features.
 
 ## general
 In doing so, it un-simplifies much of Homebrew's machinations. Do not use if you're unfamiliar with Homebrew or Command Line Interfaces.
