@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #variable that script uses to determine the location of the "main" folder
-export 'a_playground_dir'="${HOME}/werbly/.werb"
+export 'a_playground_dir'="${HOME}/.werb"
 
 #variable that script uses to determine the location of the "install to" folder
 export 'a_sandbox_dir'="${a_playground_dir}/the_brewery"
