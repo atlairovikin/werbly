@@ -1,13 +1,13 @@
 #!/bin/sh
 
-#formats following contents
+#outputs following contents formated for visibility
 fold -s -w '66' << 'EndOfHeredoc' | sed -e 's/^[^[:space:]]/      &/'
 
 
     #'cask': homebrew's term for 'application' as in software
     #'formula(e)': homebrew's term for 'utility' as in command-line
 
-  werb [[help]|( [hail] <query> )|( [define] brew|<formula> )|( [init] )|( [install] )|( [uninstall] )|( [apply] <cask> )]:
+  werb [[help]|( [hail] <query> )|( [define] brew|<formula> )|( [init] )|( [install] )|( [uninstall] )|( [apply] <cask> )|( [man] [<num1> <num2>]|[] )]:
 
     help:
       display this message
@@ -28,9 +28,9 @@ fold -s -w '66' << 'EndOfHeredoc' | sed -e 's/^[^[:space:]]/      &/'
       uninstalls brew -- while this does uninstall formulae, note it does not also uninstall any casks installed by brew - those must be removed via brew prior to uninstall (or manually, afterwards)
 
     apply <cask>:
-      sets (or unsets if already set) a symlink of <cask> as an application -- by default, this is the Users Applications folder, not the System's
+      sets (or unsets if already set) a symlink of <cask> as an application. By default, this uses the User's Applications folder, not the System's
 
-    man:
-      displays brew's "man brew" command (which does not work due to brew's confinment) in a readonly pager
+    man <num1> <num2>:
+      displays brew's manual file as line <num1> through <num2>. If input is null, it ouputs a line-count and path of the brew's manual page -- this command serves as an alternative to brew's "man brew" command, which will not work due to homebrews isolated state.
 
 EndOfHeredoc
