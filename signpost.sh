@@ -16,17 +16,17 @@ werb () {
   v_arg="${1}"
   shift '1'
   case "${v_arg}" in
-    'hail'|'define'|'apply')
-      . "${a_script_dir}/werb_${v_arg}.sh" "${@}"
-      return "${?}"
-    ;;
-    'init'|'install'|'uninstall'|'man')
-      . "${a_script_dir}/werb_${v_arg}.sh"
-      return "${?}"
-    ;;
-    'help'|*|'')
+    'help')
       . "${a_script_dir}/werb_help.sh"
-      return "${?}"
+    ;;
+    'hail'|'define'|'apply'|'undefine'|'unapply')
+      . "${a_script_dir}/werb_${v_arg}.sh" "${@}"
+    ;;
+    'init'|'install'|'uninstall'|'deinit'|'man')
+      . "${a_script_dir}/werb_${v_arg}.sh"
+    ;;
+    *)
+      printf '%s\n' "err: syntax; see 'werb help'"
     ;;
   esac
   unset -v -- 'v_arg'

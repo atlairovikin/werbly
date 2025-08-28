@@ -7,21 +7,31 @@ shift "${#}"
 if alias | grep -e 'brew' -q; then
   :
 else
-  werb define 'brew' <<- 'EndOFHeredoc' 1>/dev/null
+  werb define 'brew' <<- 'EndOfHeredoc'
 	y
-	EndOFHeredoc
+	EndOfHeredoc
+fi
+
+#ensures brew is installed
+if test -d "${a_sandbox_dir}/homebrew"; then
+  :
+else
+  #inform of error
+  printf '%s\n' 'err: cannot find homebrew'
+  #exit from script
+  return '3'
 fi
 
 #inform of processing
 printf '%s\n' 'please hold...'
 {
+#display homebrews enviroment post-modification
+export HOMEBREW_NO_AUTO_UPDATE='1'
 #ixnay on the acktray-ings
 export HOMEBREW_NO_ANALYTICS='1'
 #makes any installed casks (apps/fonts) installed with homebrew in the sandbox
 export HOMEBREW_CASK_OPTS="--appdir=${a_sandbox_dir} --fontdir=${a_sandbox_dir}"
 #prevents homebrew from just getting up and running away
-export HOMEBREW_NO_AUTO_UPDATE='1'
-#display homebrews enviroment post-modification
 brew config
 #checks if brew is up to date
 brew outdated
