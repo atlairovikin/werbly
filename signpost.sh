@@ -20,7 +20,7 @@ werb () {
       . "${a_script_dir}/werb_${v_arg}.sh" "${@}"
       return "${?}"
     ;;
-    'init'|'install'|'uninstall')
+    'init'|'install'|'uninstall'|'man')
       . "${a_script_dir}/werb_${v_arg}.sh"
       return "${?}"
     ;;

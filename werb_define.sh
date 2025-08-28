@@ -2,14 +2,9 @@
 
 #confirms existance of input
 test -n "${1}" || \
-  {
   #^else sets "brew" as default
   set 'brew'
-    #'provides alternative to "werb init" that excludes updating':
-  export HOMEBREW_NO_ANALYTICS='1'
-  export HOMEBREW_CASK_OPTS="--appdir=${a_sandbox_dir} --fontdir=${a_sandbox_dir}"
-    #.
-  }
+
 #defines (or undefines) all input values
 while test "${#}" -ge '1'; do
   #decides action based on alias status of input (if already set or not)

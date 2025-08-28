@@ -16,7 +16,7 @@ fold -s -w '66' << 'EndOfHeredoc' | sed -e 's/^[^[:space:]]/      &/'
       requests verdict using <query> as prompt -- made for in-line scripting; has few uses otherwise
 
     define [brew]|<formula>:
-      sets either "brew" or <formula> as alias for respective executables -- if argument is left null, then "brew" is assumed, & some of "werb init"'s variables are exported (to allow for initiating brew without auto-updating/doctoring)
+      sets either "brew" or <formula> as alias for respective executables -- if argument is left null, then "brew" is assumed
 
     init:
       updates, initializes, and then verifies brew's enviroment as desired for a sandbox experience
@@ -29,5 +29,8 @@ fold -s -w '66' << 'EndOfHeredoc' | sed -e 's/^[^[:space:]]/      &/'
 
     apply <cask>:
       sets (or unsets if already set) a symlink of <cask> as an application -- by default, this is the Users Applications folder, not the System's
+
+    man:
+      displays brew's "man brew" command (which does not work due to brew's confinment) in a readonly pager
 
 EndOfHeredoc
