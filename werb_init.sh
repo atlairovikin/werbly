@@ -7,6 +7,7 @@ shift "${#}"
 if alias | grep -e 'brew' -q; then
   :
 else
+  #defines it
   werb define 'brew' <<- 'EndOfHeredoc'
 	y
 	EndOfHeredoc
