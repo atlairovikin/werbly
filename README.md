@@ -9,21 +9,25 @@ Please also note that the command line's name is 'werb', not 'werbly', and shoul
 # install
 
 ## using git:
-MacOS comes installed with an older version of git, which may be used to install werbly's command line.
+MacOS comes installed with an older version of git, which may be used to install the current version of werbly's command line.
 
-type `git clone 'https://github.com/atlairovikin/werbly.git' "${HOME}/werbly"` into your terminal
+- type `git clone 'https://github.com/atlairovikin/werbly.git' "${HOME}/werbly"` into your terminal
 
 ## downloading .zip file
 
-rename the now-uncompressed .zip archive folder to 'werbly'
+This method may be used to downlaod an older release, should you so desire.
+
+1. download the .zip file from your desired release
+2. move said .zip file to your home directory (aka `~`/`"${HOME}"` in cmdln)
+3. uncompress the .zip file & rename the now-uncompressed archive folder to 'werbly'
 
 
 # setup
 
-Add the line `. "${HOME}/werbly/signpost.sh"` to your shell profile. If you do not already have a shell profile, then create one using: `touch "${HOME}/.profile"`
-note:	if you are using .profile as your profile, please remember to use `sh --login` from terminal if your default shell is not `sh` or if your terminal is configured to not login automatically
+- Add the line `. "${HOME}/werbly/signpost.sh"` to your shell profile. If you do not already have a shell profile, then create one using: `touch "${HOME}/.profile"`
+- note:	if you are using .profile as your profile, please remember to use `sh --login` from terminal if your default shell is not `sh` or if your terminal is configured to not login automatically
 
 
 # uninstall
 
-simply delete the 'werbly' file at your home directory and remove the line `. "${HOME}/werbly/signpost.sh"` from your shell profile
+- simply delete the 'werbly' file at your home directory and remove the line `. "${HOME}/werbly/signpost.sh"` from your shell profile
