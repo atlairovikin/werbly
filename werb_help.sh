@@ -4,10 +4,10 @@
 fold -s -w '66' << 'EndOfHeredoc' | sed -e 's/^[^[:space:]]/      &/'
 
 
-    #'cask': homebrew's term for 'application' as in software
-    #'formula(e)': homebrew's term for 'utility' as in command-line
+    #'cask': homebrew's term for 'application' as in "software"
+    #'formula(e)': homebrew's term for 'utility' as in "command line"
 
-  werb [[help]|( [hail] <query> )|( [define|undefine] brew|<formula> )|( [init|deinit] )|( [install|uninstall] )|( [apply|unapply] <cask> )|( [man] [<num1> <num2>]|[] )]:
+  werb [[help]|( [hail] <query> )|( [define|undefine] brew|<formula> )|( [init|uninit] )|( [install|uninstall] )|( [apply|unapply] <cask> )|( [man] []|[<num1> <num2>] )]:
 
     help:
       display this message
@@ -36,6 +36,6 @@ fold -s -w '66' << 'EndOfHeredoc' | sed -e 's/^[^[:space:]]/      &/'
       removes a symlink of <cask> from the Applications folder, removing <cask> as a visable app without deleting it -- by default, this uses the User's Applications folder, not the System's
 
     man <num1> <num2>:
-      displays brew's manual file as line <num1> through <num2>. If input is null, it ouputs a line-count and path of the brew's manual page -- this command serves as an alternative to brew's "man brew" command, which will not work due to homebrews isolated state.
+      displays brew's manual file as line <num1> through <num2>. If input is null, it ouputs a line-count and path of the brew's manual page -- note that the man page is in markdown and as such will have some odd formating -- this command serves as an alternative to brew's "man brew" command, which will not work due to homebrews isolated state.
 
 EndOfHeredoc

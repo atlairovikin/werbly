@@ -31,7 +31,7 @@ This is very straightforward; Simply download/clone the Werbly version you wish,
 
 
 ## additional information
-Werbly is constructed with the point of installing and running brew in an isolated manner, which homebrew refuses to support. As such, it would be rather uncool of me to not support my code to be similarly isolated. So here are some quick tips:
+Werbly is constructed with the point of installing and running homebrew in an isolated manner, which homebrew refuses to support. As such, it would be rather uncool of me to not support my code to be similarly isolated. So here are some quick tips:
 - Werbly is rather self sufficient, with the few dependancies it has being present on most every Mac. In addition, it does not deposit/create/read any files outside of its folder (unless explicitly requested by the user).
 - The file 'signpost.sh' defines the relative paths that are used throughout Werbly command line. You may edit the file and change the definitions from their default values, allowing Werbly (and by extension, homebrew) to be installed most anywhere.
  - A not un-agreeable alternative might be to simply symlink Werbly to your home directory by using something like `ln -s -- <path to werbly> "${HOME}/werbly"`.

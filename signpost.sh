@@ -22,7 +22,7 @@ werb () {
     'hail'|'define'|'apply'|'undefine'|'unapply')
       . "${a_script_dir}/werb_${v_arg}.sh" "${@}"
     ;;
-    'init'|'install'|'uninstall'|'deinit'|'man')
+    'init'|'install'|'uninstall'|'uninit'|'man')
       . "${a_script_dir}/werb_${v_arg}.sh"
     ;;
     *)
