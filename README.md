@@ -38,6 +38,8 @@ Werbly is constructed with the point of installing and running homebrew in an is
  - Unlike Homebrew, I will do my best to ensure this is a recurring feature of Werbly, and shall accept issues on the topic.
 - You can hide werbly (just as if it were '.werbly') by using the MacOS-specific command `chflags -hv 'hidden' <path to werbly>` (to undo this, simply run the command again but with the argument 'hidden' as 'nohidden').
 
+---
+
 ### Feedback
 For general feedback, feel free to open a discussion at <https://github.com/atlairovikin/werbly/issues>
 For feature requests or bug reports, please open a respective issue at <https://github.com/atlairovikin/werbly/issues>
