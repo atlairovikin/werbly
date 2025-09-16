@@ -2,7 +2,7 @@
 A homebrew isolator, with the goal to circumvent Homebrew's innate security concerns using built-in features.
 
 ### !
-In doing so, it un-simplifies much of Homebrew's machinations. Do not use if you're unfamiliar with Homebrew or Command Line Interfaces.
+In doing so, it un-simplifies some of Homebrew's machinations. Do not use if you're unfamiliar with Homebrew or Command Line Interfaces.
 Please also note that the command line's name is 'werb', not 'werbly', and should be called as such.
 
 
@@ -27,16 +27,17 @@ This is very straightforward; Simply download/clone the Werbly version you wish,
 
 # setup
 - Add the line `. "${HOME}/werbly/signpost.sh"` to your shell profile. If you do not already have a shell profile, then create one using: `touch "${HOME}/.profile"`
-- note:	if you are using .profile as your profile, please remember to use `sh --login` from terminal if your default shell is not `sh` or if your terminal is configured to not login automatically
+- note:	if you are using '.profile' as your profile, please remember to use `sh --login` from terminal if your default shell is not (POSIX) `sh` or if your terminal is configured to not login automatically
 
 
 ## additional information
 Werbly is constructed with the point of installing and running homebrew in an isolated manner, which homebrew refuses to support. As such, it would be rather uncool of me to not support my code to be similarly isolated. So here are some quick tips:
 - Werbly is rather self sufficient, with the few dependancies it has being present on most every Mac. In addition, it does not deposit/create/read any files outside of its folder (unless explicitly requested by the user).
 - The file 'signpost.sh' defines the relative paths that are used throughout Werbly command line. You may edit the file and change the definitions from their default values, allowing Werbly (and by extension, homebrew) to be installed most anywhere.
- - A not un-agreeable alternative might be to simply symlink Werbly to your home directory by using something like `ln -s -- <path to werbly> "${HOME}/werbly"`.
+ - A not un-agreeable alternative might be to simply symlink Werbly to your home directory by executing `ln -s -- <path to werbly> "${HOME}/werbly"` or something similar.
  - Unlike Homebrew, I will do my best to ensure this is a recurring feature of Werbly, and shall accept issues on the topic.
 - You can hide werbly (just as if it were '.werbly') by using the MacOS-specific command `chflags -hv 'hidden' <path to werbly>` (to undo this, simply run the command again but with the argument 'hidden' as 'nohidden').
+ - This can alternatively, albiet a bit more complicatedly, be done by changing the name of 'werbly's folder to '.werbly', and then updating your shell profile and (the now) '.werbly/signpost.sh' to reflect such.
 
 ---
 
