@@ -1,14 +1,16 @@
-# Security Policy
+## Security Policy
 
-## Supported Versions
+Werbly is developed/supported on MacOS (both Silicon & Intel), and offers only theoretical Linux support.
 
-Similar to Homebrew, Werbly is rolling release. That means only the current release is supported. However, this is subject to exception at my discretion.
-Werbly is only supported on MacOS (silicon & intel chip).
+---
 
+> To open an issue, please go to <https://github.com/atlairovikin/werbly/issues>.
 
-## Reporting a Vulnerability
+#### Supported Versions
+
+Similar to Homebrew, Werbly is rolling release. This means that only the current release is actively supported (subject to exception at my discretion; open an issue for any such requests).
+
+#### Reporting a Vulnerability
 
 To report a vulnerability, please open an (ideally private) issue on the matter.
-
-You can open an issue at <https://github.com/atlairovikin/werbly/issues>.
 You can expect to get an update on the matter at any point within a business week.
