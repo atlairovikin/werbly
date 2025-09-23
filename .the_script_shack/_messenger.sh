@@ -8,7 +8,8 @@ werb () {
     'hail'|'define'|'apply'|'undefine'|'unapply')
       . "${a_script_dir}/${_arg}.sh" "${@}"
     ;;
-    'help'|'init'|'install'|'uninstall'|'uninit'|'man')
+    'help'|'init'|'install'|'uninstall'|'deinit'|'man'|'uninit')
+      test "${_arg}" != 'uninit' || _arg='deinit'
       . "${a_script_dir}/${_arg}.sh"
     ;;
     *) printf "%s\n" ' error(syntax): command not recognized; see <werb help> for additional information'; false;;
