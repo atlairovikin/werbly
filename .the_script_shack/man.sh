@@ -3,7 +3,7 @@
 {
 test -e "${a_sandbox_dir}/homebrew/docs/Manpage.md" || \
   {
-  printf '%s\n' " error: Manual at [${a_sandbox_dir}/homebrew/docs/Manpage.md] does not exist; Halting."  1>&3
+  printf '%s\n' " error: Manual at [${a_sandbox_dir}/homebrew/docs/Manpage.md] does not exist; Halting."  1>&2
   return '2'
   }
 if test "${#}" -ge '1'; then
@@ -16,5 +16,5 @@ else
   wc -l "${a_sandbox_dir}/homebrew/docs/Manpage.md"
 fi
 } && \
-printf '%s\n' ' :manpage fetched!' 1>&3
+printf '%s\n' ' :manpage fetched!' 1>&2
 return '0'

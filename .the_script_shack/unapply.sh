@@ -3,7 +3,7 @@
 {
 test -n "${1}" || \
   {
-  printf '%s\n' ' error(syntax): Missing required argument; Halting.' 1>&3
+  printf '%s\n' ' error(syntax): Missing required argument; Halting.' 1>&2
   return '2'
   }
 werb hail '%s\n' "Remove link(s) at [${an_app_dir}/${1}] of cask(s) '${@}' at [${a_sandbox_dir}/${1}], respectively?" || \
@@ -18,7 +18,7 @@ while test "${#}" -ge '1'; do
     rm -- "${an_app_dir}/${1}"
   else
     if test -e "${an_app_dir}/${1}"; then
-      printf '%s\n' " error: Pathname [${an_app_dir}/${1}] exists, but is not a symlink file; Halting." 1>&3
+      printf '%s\n' " error: Pathname [${an_app_dir}/${1}] exists, but is not a symlink file; Halting." 1>&2
       return '3'
     else
       printf '%s\n' " warning: Pathname [${an_app_dir}/${1}] does not exist; Skipping..."
@@ -31,5 +31,5 @@ done
 printf '%s\n' 'Application folder, post- link removal:' && \
   ls -a -- "${an_app_dir}"
 } && \
-printf '%s\n' ' :unlinking complete!' 1>&3
+printf '%s\n' ' :unlinking complete!' 1>&2
 return '0'

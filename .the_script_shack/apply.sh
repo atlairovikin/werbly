@@ -3,7 +3,7 @@
 {
 test -n "${1}" || \
   {
-  printf '%s\n' ' error(syntax): Missing argument; Halting.' 1>&3
+  printf '%s\n' ' error(syntax): Missing argument; Halting.' 1>&2
   return '2'
   }
 werb hail "Make link(s) at [${a_sandbox_dir}/] of cask(s) '${@}' at [${an_app_dir}/], respectively?" || \
@@ -21,5 +21,5 @@ done
 printf '%s\n' 'Applications folder, post- link creation:' && \
   ls -a -- "${an_app_dir}"
 } && \
-printf '%s\n' ' :finished linking!' 1>&3
+printf '%s\n' ' :finished linking!' 1>&2
 return '0'
