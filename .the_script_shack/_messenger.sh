@@ -1,5 +1,6 @@
 #!/bin/sh
 
+alias 'werbly'='werb'
 werb () {
   _arg="${1}"; shift '1'
   case "${_arg}" in

@@ -24,5 +24,5 @@ printf '%s\n' 'Sandbox folder, post-installation:' && \
 cd "${1}"; } || \
 cd "${HOME}"
 } && \
-printf '%s\n' ' :installation complete!' 1>&3
+printf '%s\n' ' :installation complete!' 1>&2
 return '0'

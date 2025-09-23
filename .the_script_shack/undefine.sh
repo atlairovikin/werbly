@@ -18,5 +18,5 @@ while test "${#}" -ge '1'; do
   shift '1'
 done
 } && \
-printf '%s\n' ' :finished undefining!' 1>&3
+printf '%s\n' ' :finished undefining!' 1>&2
 return '0'

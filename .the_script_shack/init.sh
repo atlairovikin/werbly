@@ -3,7 +3,7 @@
 {
 test -d "${a_sandbox_dir}/homebrew" || \
   {
-  printf '%s\n' ' error: Cannot find homebrew; Halting.' 1>&3
+  printf '%s\n' ' error: Cannot find homebrew; Halting.' 1>&2
   return '2'
   }
 alias | grep -e 'brew' -q || \
@@ -19,5 +19,5 @@ brew config | { grep -e 'HOMEBREW_NO_AUTO_UPDATE' -q; grep -e 'HOMEBREW_NO_ANALY
   return '3'
   }
 } && \
-printf '%s\n' ' :initialization complete!' 1>&3
+printf '%s\n' ' :initialization complete!' 1>&2
 return '0'

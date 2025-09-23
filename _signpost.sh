@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #variable that Werbly uses to find itself
-export 'a_playground_dir'="${HOME}/.werbly"
+export 'a_playground_dir'="${HOME}/werbly"
 #variable that Werbly uses to find the install-to directory
 export 'a_sandbox_dir'="${a_playground_dir}/the_brewery"
 #variable that Werbly uses to find it's scripts
