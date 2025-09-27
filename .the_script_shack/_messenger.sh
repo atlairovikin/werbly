@@ -4,7 +4,7 @@ alias 'werbly'='werb'
 werb () {
   _arg="${1}"; shift '1'
   case "${_arg}" in
-    '') printf '%s\n' 'Here!';;
+    '') printf '%s\n' ' Here!';;
     'hail'|'define'|'apply'|'undefine'|'unapply')
       . "${a_script_dir}/${_arg}.sh" "${@}"
     ;;

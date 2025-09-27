@@ -8,7 +8,7 @@ Werbly is developed/supported on MacOS (both Silicon & Intel), and offers only t
 
 #### Supported Versions
 
-Similar to Homebrew, Werbly is rolling release. This means that only the current release is actively supported (subject to exception at my discretion; open an issue for any such requests).
+Similar to Homebrew, Werbly is rolling release: Only the current release is actively supported (subject to exception at my discretion; open an issue for any such requests).
 
 #### Reporting a Vulnerability
 
