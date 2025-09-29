@@ -5,7 +5,6 @@ test -n "${1}" || \
   {
   set 'brew'
   printf '%s\n' " warning(syntax): Missing argument; Defaulting to '${1}'."
-  false
   }
 werb hail "Define command(s) '${1}' as executable(s) at [${a_sandbox_dir}/homebrew/bin/], respectively?" || \
   return '1'

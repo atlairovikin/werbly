@@ -7,7 +7,7 @@ In doing so, Werbly un-simplifies some of Homebrew's machinations. DO NOT USE if
 
 > Werbly's command line is `werb` (which is 'brew' spelt backwards).
 
-## Regarding Installation
+## Managing Werbly
 #### installation:
 MacOS comes (pre)installed with an older version of git, which may be used to install the current version of Werbly. This is the most recommended method, as not only will you get the current version, but you will also need to be able to do at least this much if you are to operate Werbly and Homebrew. You may also choose to download Werbly as a '.zip' or '.tar.gz' archive from the website directly, which can be useful for downloading a specific release.
 
@@ -41,25 +41,22 @@ To confirm this, call `werb` without any arguments: You should see a response.
 To remove Werbly, simply delete the 'werbly' folder and remove the line `. "${HOME}/werbly/signpost.sh"` from your shell profile. Be sure to unapply any casks first (as the symlinks will no longer work).
 
 #### changing versions:
-If you wish to change werbly versions without loosing your local homebrew data, follow:
-
-> If you modified the local 'signpost.sh'/'_signpost.sh' file, be sure to transfer it as well. Do not replace the new file with the old one, but rather transfer modified contents on a case-by-case basis, as different versions may contain different code.
-
+- from the new version, run:
 ```
-werb depo <path_to_old_Werbly> <path_to_new_Werbly>
+werb fetch <path_to_old_Werbly>
 ```
-And boom! You're done.
+And you, should there have been no errors, now can remove the old version and its contents manually. If there were errors, follow the instructions given before doing anything else.
 
 ---
 
 ## Additional Information
-Werbly is constructed with the point of installing and running homebrew in an isolated manner, which homebrew refuses to support. As such, it would be rather uncool of me to not support my code to be similarly isolated. So here are some quick tips:
+Werbly is constructed with the point of installing and running homebrew in an isolated manner, which homebrew itself refuses to support. As such, it would be rather uncool of me to not support my code being similarly isolated. So here are some quick tips:
 - Werbly is rather self sufficient, with the few dependancies it requires being present on most every Mac. In addition, it does not deposit/create/read any files outside of its folder (unless explicitly requested by the user, such as with `werb [un]apply <cask>`).
 - The local file '_signpost.sh' defines the relative paths that are used throughout Werbly's command line. You may edit the file and change the definitions from their default values, allowing Werbly (and by extension, homebrew) to be installed most anywhere.
  - A not un-agreeable alternative might be to simply symlink Werbly to your home directory by executing `ln -s -- <path to werbly> "${HOME}/werbly"` or something similar.
  - Unlike Homebrew, I will do my best to ensure this is a recurring feature of Werbly, and shall accept issues on the topic.
 - You can hide werbly (just as if it were '.werbly') by using the MacOS-specific command `chflags -hv 'hidden' <path to werbly>` (to undo this, simply run the command again but with the argument 'hidden' as 'nohidden').
- - This can alternatively, albiet a bit more complicatedly, be done by changing the name of 'werbly's folder to '.werbly', and then updating your shell profile and (the now) '.werbly/signpost.sh' to reflect such.
+ - This can alternatively, albiet a bit more complicatedly, be done by changing the name of 'werbly's folder to '.werbly', and then updating your shell profile and (the now) '.werbly/_signpost.sh' to reflect such.
 
 #### Feedback
 For general feedback, feel free to open a discussion at:
@@ -69,7 +66,6 @@ For feature requests or bug reports, please open a respective issue at:
 Thank you!
 
 #### Security
-
 For any further questions or concerns regarding supported versions, or how to report a vulnerability, please refer to:
 <https://github.com/atlairovikin/werbly/blob/main/SECURITY.md>
 
