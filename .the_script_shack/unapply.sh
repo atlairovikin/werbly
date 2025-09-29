@@ -6,7 +6,7 @@ test -n "${1}" || \
   printf '%s\n' ' error(syntax): Missing required argument; Halting.' 1>&2
   return '2'
   }
-werb hail '%s\n' "Remove link(s) at [${an_app_dir}/${1}] of cask(s) '${@}' at [${a_sandbox_dir}/${1}], respectively?" || \
+werb hail "Remove link(s) at [${an_app_dir}/${1}] of cask(s) '${@}' at [${a_sandbox_dir}/${1}], respectively?" || \
   return '1'
 printf '%s\n' 'Application folder, pre- link removal:' && \
   ls -a -- "${an_app_dir}"

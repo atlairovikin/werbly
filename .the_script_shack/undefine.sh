@@ -13,7 +13,6 @@ while test "${#}" -ge '1'; do
     unalias "${1}"
   else
     printf '%s\n' " warning: Alias '${1}' does not exist; Skipping..."
-    false
   fi
   shift '1'
 done

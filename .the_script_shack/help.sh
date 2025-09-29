@@ -5,7 +5,7 @@ printf '\n%s\n' '---------------------------------------------------------------
 #outputs following contents formated for visibility
 fold -s -w '66' << 'EndOfHeredoc' | sed -e 's/^[^[:space:]]/      &/'
 
-  werb [ help | hail [<query>] | [un]define [brew|<formula>] ... | [de|un]init | [un]install | [un]apply <cask> ... | man <num1> [<num2>] ]:
+  werb [ help | hail [<query>] | [un]define [brew|<formula>] ... | [de|un]init | [un]install | [un]apply <cask> ... | man <num1> [<num2>] | fetch <dir> ]:
 
     :
       If no subsequent command is given, or if the subsequent command is null, then the call is treated as a ping and the response 'Here!' will be given.
@@ -54,6 +54,9 @@ fold -s -w '66' << 'EndOfHeredoc' | sed -e 's/^[^[:space:]]/      &/'
       -
       If only one argument is provided, then it is treated as the second argument, and the first argument is assumed as '1'.
       If no arguments are provided, it ouputs the pathname and line count of the manpage.
+
+    fetch <dir>:
+      For changing Werbly versions. Copies the entirety of an old Werbly sandbox (specified as <dir>) into the current one. Will not overwrite files, even if permission to write to a pre-existing sandbox is given.
 
 EndOfHeredoc
 #buffer

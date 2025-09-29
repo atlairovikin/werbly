@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 {
-set "${PWD}"
+_pwd="${PWD}"
 test -d "${a_sandbox_dir}/homebrew" || \
   {
   printf '%s\n' " error: Cannot find [${a_sandbox_dir}/homebrew]; Halting." 1>&2
@@ -20,22 +20,28 @@ else
 fi
 if test -e '.uninstall_brew.sh'; then
   /bin/bash '.uninstall_brew.sh' --path homebrew
+  set "${?}"
 else
   test -e 'uninstall.sh' || \
 	#"https://docs.brew.sh/Installation":
 curl -fsSLO https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh
 /bin/bash uninstall.sh --path homebrew
 	#.
+  set "${?}"
   rm 'uninstall.sh'
 fi
+test "${1}" == '0' || \
+  {
+  printf '%s\n' " warning: Uninstall script aborted; Halting." 1>&2
+  return '1'
+  }
 test "${_posix:-unset}" == '0' || \
   export 'POSIXLY_CORRECT'='1'
 unset -v -- '_posix'
 printf '%s\n' 'Sandbox folder, post-uninstall:' && \
   ls -a -- "${a_sandbox_dir}"
-{ test -d "${1}" && \
-cd "${1}"; } || \
-cd "${HOME}"
+test -e "${_pwd}" && cd "${_pwd}" || cd "${HOME}"
+unset -v -- '_pwd'
 } && \
-printf '%s\n' ' :installation complete!' 1>&2
+printf '%s\n' ' :uninstallation complete!' 1>&2
 return '0'

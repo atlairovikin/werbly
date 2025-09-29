@@ -1,7 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 {
-set "${PWD}"
+_pwd="${PWD}"
+test ! -d "${a_sandbox_dir}/Homebrew" || \
+  {
+  printf '%s\n' " error: Homebrew directory [${a_sandbox_dir}/Homebrew] already exists; Halting."
+  return '1'
+  }
 test -d "${a_sandbox_dir}" || \
   {
   werb hail "Is [${a_playground_dir}] the intended directory to put homebrew's sandbox?" || \
@@ -20,9 +25,8 @@ mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar 
 	#.
 printf '%s\n' 'Sandbox folder, post-installation:' && \
   ls -a -- "${a_sandbox_dir}"
-{ test -d "${1}" && \
-cd "${1}"; } || \
-cd "${HOME}"
+test -d "${_pwd}" && cd "${_pwd}" || cd "${HOME}"
+unset -v -- '_pwd'
 } && \
 printf '%s\n' ' :installation complete!' 1>&2
 return '0'
