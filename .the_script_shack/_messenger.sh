@@ -11,8 +11,9 @@ werb () {
     'define'|'apply'|'undefine'|'unapply')
       . "${a_script_dir}/${_arg}.sh" "${@}"
     ;;
-    'help'|'init'|'deinit'|'man'|'uninit'|'list')
-      test "${_arg}" != 'uninit' || _arg='deinit'
+    'help'|'init'|'deinit'|'man'|'uninit'|'list'|'show')
+      { test "${_arg}" != 'uninit' || _arg='deinit'; } && \
+      { test "${_arg}" != 'show' || _arg='list'; }
       shift "${#}"
       . "${a_script_dir}/${_arg}.sh"
     ;;

@@ -19,7 +19,7 @@ printf "${1}\n" | grep -e 'appdir.*fontdir' -qv
   return '31'
   }
 alias | grep -e 'brew' -q && \
-  werb undefine 'brew' <<- 'EndOfHeredoc' 1>&2>/dev/null
+  werb undefine 'brew' <<- 'EndOfHeredoc' 1>/dev/null 2>/dev/null
 	y
 	EndOfHeredoc
 set "$(alias)"

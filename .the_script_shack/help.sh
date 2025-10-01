@@ -5,7 +5,7 @@ printf '\n\n%s\n\n' '-----------------------------------------------------------
 #outputs following contents formated for visibility
 fold -s -w '66' << 'EndOfHeredoc' | sed -e 's/^[^[:space:]]/      &/'
 
-  werb [ help | hail [<query>] | [un]define [brew|<formula>] ... | [de|un]init | [un]install | [un]apply <cask> ... | man <num1> [<num2>] | fetch <dir> | list ]:
+  werb [ help | hail [<query>] | [un]define [brew|<formula>] ... | [de|un]init | [un]install | [un]apply <cask> ... | man <num1> [<num2>] | fetch <dir> | list|show ]:
 
     :
       If no subsequent command is given, or if the subsequent command is null, then the call is treated as a ping and the response 'Here!' will be given.
@@ -58,7 +58,7 @@ fold -s -w '66' << 'EndOfHeredoc' | sed -e 's/^[^[:space:]]/      &/'
     fetch <dir>:
       For changing Werbly versions. Copies the entirety of an old Werbly sandbox (specified as <dir>) into the current one. Will not overwrite files, even if permission to write to a pre-existing sandbox is given.
 
-    list:
+    list | show:
       To show the current sandbox directory's contents. Useful for knowing what to <cask> would be to `werb [un]apply <cask>`.
 
 EndOfHeredoc

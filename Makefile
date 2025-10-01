@@ -8,4 +8,4 @@ all:
 	|| touch '$(TARGET)'; \
 	grep -Fq '$(CMDLN)' '$(TARGET)' \
 	|| printf '\n%s\n' '$(CMDLN)' >> '$(TARGET)'; \
-	} && printf '%s\n' ' done!'
+	} && printf '%s\n' ' done!' &

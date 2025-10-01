@@ -8,7 +8,7 @@ test -d "${a_sandbox_dir}/homebrew" || \
   return '2'
   }
 alias | grep -e 'brew' -qv && \
-  werb define 'brew' <<- 'EndOfHeredoc' 1>&2>/dev/null
+  werb define 'brew' <<- 'EndOfHeredoc' 1>/dev/null 2>/dev/null
 	y
 	EndOfHeredoc
 set "$(alias)"
