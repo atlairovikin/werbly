@@ -24,6 +24,12 @@ werb () {
       shift "${#}"
       . "${a_script_dir}/${_arg}.sh"
     ;;
+    'exit')
+      {
+      { unalias 'werbly'; unset -f -- 'werb'; } || \
+      { printf '%s\n' ' error: Failed to exit.'; false; }
+      } && \
+      printf '%s\n' ' :exited sucessfully!';;
     *) printf "%s\n" ' error(syntax): command not recognized; see <werb help> for additional information.'; false;;
   esac
   set "${?}"
