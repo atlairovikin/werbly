@@ -3,13 +3,13 @@ A homebrew isolator, with the goal to circumvent Homebrew's innate security conc
 
 ---
 
-In doing so, Werbly un-simplifies some of Homebrew's machinations. DO NOT USE if you're unfamiliar with Homebrew or Command Line Interfaces.
+In doing so, Werbly un-simplifies some of Homebrew's machinations. Do not use if you're unfamiliar with Homebrew or Command Line Interfaces.
 
 > Werbly's command line is `werb` (which is 'brew' spelt backwards).
 
 ## Managing Werbly
 #### installation:
-MacOS comes (pre)installed with an older version of git, which may be used to install the current version of Werbly. This is the most recommended method, as not only will you get the current version, but you will also need to be able to do at least this much if you are to operate Werbly and Homebrew. You may also choose to download Werbly as a '.zip' or '.tar.gz' archive from the website directly, which can be useful for downloading a specific release.
+MacOS comes pre-installed with an older version of git, which may be used to install the current version of Werbly. This is the most recommended method, as not only will you get the current version, but you will also need to be able to do at least this much if you are to operate Werbly and Homebrew. You may also choose to download Werbly as a '.zip' or '.tar.gz' archive from the website directly, which can be useful for downloading a specific release.
 
 > In the following instructions, all occurrences of '\<pathname>' are to be substituted with the desired destination directory for Werbly. For example, if you wish to install Werbly with the name 'not-brew' at your home directory (e.g. '/Users/User'), you would substitute '\<pathname>' with '/Users/User/not-brew'.
 
