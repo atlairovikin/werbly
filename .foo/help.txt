@@ -1,0 +1,26 @@
+------------------------------------------------------------------------
+
+werb { help | [un]install | [un]apply <cask> | [de]init | show | get <directory> | man }:
+
+    help:
+        show this message
+
+    [un]install:
+        Either installs or uninstalls homebrew into/from an isolated directory.
+
+    [un]apply <cask>:
+        Either applies or unapplies an application from homebrew as <cask> (as shown with `werb show`).
+    
+    [de]init:
+        Either initializes or deinitializes the shell environment as nessesary to contain homebrew while using it.
+    
+    show:
+        Shows contents of the sandbox directory. This can be used to know what to input into `werb [un]apply`.
+
+    get <directory>:
+        Fetches a previous version of werbly's sandbox contents. <directory> should be the directory to the old werbly's main folder.
+
+    man:
+        Opens a pager on brew's manual as raw text. Note that the manpage is formated in markdown, and may appear odd when viewed this way.
+
+------------------------------------------------------------------------
