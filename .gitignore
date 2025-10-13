@@ -1,3 +1,6 @@
 !.gitignore
 .DS_Store
+bar/
+
+# listed for pre-v2 compatability
 the_brewery/
