@@ -16,6 +16,7 @@ Most notable changes:
   - fetching old Werbly homebrew directories
 - Renamed `werb fetch` to `werb get`.
 - Standardized error codes.
+- added the `werb abort` and `werb exit` commands
 - Commands now inform you when they start.
 - Werbly now only exports one variable to environment (for internal use): `werblyPath`.
   - The command `werbly exit` now unsets said variable
