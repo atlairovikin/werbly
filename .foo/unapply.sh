@@ -8,7 +8,7 @@ printf 'Working...\n' && {
     while test "${#}" -ge '1'; do
         (
             set "${HOME}/Applications/${1%.app}.app"
-              if test -L "${1}"; then
+            if test -L "${1}"; then
                 rm -- "${1}"
             else
                 if test -e "${1}"; then

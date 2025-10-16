@@ -1,6 +1,9 @@
 ------------------------------------------------------------------------
 
-werb { help | [un]install | [un]apply <cask> | [de]init | show | get <directory> | man }:
+werb { abort | help | [un]install | [un]apply <cask> | [de]init | show | get <directory> | man | exit }:
+
+    abort:
+        undefines werb
 
     help:
         show this message
@@ -22,5 +25,8 @@ werb { help | [un]install | [un]apply <cask> | [de]init | show | get <directory>
 
     man:
         Opens a pager on brew's manual as raw text. Note that the manpage is formated in markdown, and may appear odd when viewed this way.
+
+    exit:
+        undefines werb and unsets any related environmental commands/variables, including `brew`.
 
 ------------------------------------------------------------------------
