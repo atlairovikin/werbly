@@ -35,7 +35,7 @@ make PROFILE="<pathname1>" WERBLY="<pathname2>"
 Aaand you're done!
 To confirm this, call `werb` without any arguments: You should see a response.
 
-> If you do not receive a response, please review the above instructions once more. If the problem persists, please remove and then re-download Werbly. If the problem continues to persist, please refer to 'docs/SUPPORT.md'.
+> If you do not receive a response, please review the above instructions once more. If the problem persists, please remove and then re-download Werbly. If the problem continues to persist, please refer to [docs/SUPPORT.md](https://github.com/atlairovikin/werbly/blob/main/docs/SUPPORT.md).
 
 #### removal:
 
@@ -49,7 +49,7 @@ To remove Werbly, simply delete the 'werbly' folder and remove the line fetch fr
 werb fetch <path_to_old_Werbly>
 ```
 
-And you, should there have been no errors, now can remove the old version and its contents manually. If there were errors, follow the instructions given before refering to 'docs/SUPPORT.md'.
+And you, should there have been no errors, now can remove the old version and its contents manually. If there were errors, follow the instructions given before refering to [docs/SUPPORT.md](https://github.com/atlairovikin/werbly/blob/main/docs/SUPPORT.md).
 
 ---
 
