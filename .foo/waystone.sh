@@ -12,7 +12,7 @@ werb () {
         help) cat "${werblyPath}/.foo/help.txt";;
         install|uninstall|init|deinit|show|man|exit) . "${werblyPath}/.foo/${_werb}.sh";;
         define|undefine|apply|unapply|get) . "${werblyPath}/.foo/${_werb}.sh" "${@}";;
-        *) printf 'Error: Unknown argument; Halting.\n' 1>&2;;
+        *) printf 'Error: Unknown argument; Halting.\n' 1>&2; printf 'See `werb help` for known arguments.\n';;
     esac
     unset -v '_werb'
 }
