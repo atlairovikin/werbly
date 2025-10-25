@@ -21,3 +21,8 @@ Most notable changes:
 - Werbly now only exports one variable to environment (for internal use): `werblyPath`.
   - The command `werbly exit` now unsets said variable
 - Reduced overhead.
+
+## 2.1.0
+
+- `werb apply <app>` now checks for existance of <app> first
+- 

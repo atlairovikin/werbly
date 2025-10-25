@@ -12,17 +12,22 @@ printf 'Working...\n' && {
     while test "${#}" -ge '1'; do
         (
             set "${1%.app}.app" "${HOME}/Applications"
-	    if test ! -e "${2}/${1}"; then
-		ln -s -- "${werblyPath}/bar/${1}" "${2}/${1}"
+	    if test -e "${werblyPath}/bar/${1}"; then
+		if test ! -e "${2}/${1}"; then
+		    ln -s -- "${werblyPath}/bar/${1}" "${2}/${1}"
+		else
+		    printf '%s\n' "Warning: [${1}] is already applied; Skipping..."
+		    false
+		fi
 	    else
-		printf '%s\n' "Error: Already applied; Skipping..."
+		printf '%s\n' "Warning: [${1}] does not exist; Skipping..."
 		false
 	    fi
         )
         shift 1
     done
 
-    printf 'User applications folder, post-apply:\n' &&
+    printf 'User applications folder, post-apply:\n' && \
         ls -a -- "${HOME}/Applications"
 
 } && printf 'Done!\n'

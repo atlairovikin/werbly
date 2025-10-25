@@ -6,15 +6,12 @@ printf 'Working...\n' && {
         return 1
     }
 
-    set "$(alias)" "${1}"
-    printf '%s\n' "${1}" | grep -e 'brew' -qv && \
+    printf '%s\n' "$(alias)" | grep -e 'brew' -qv && \
         werb define brew 1>/dev/null
-    set "$(alias)" "${2}"
-    printf '%s\n' "${1}" | grep -e 'brew' -q || {
+    printf '%s\n' "$(alias)" | grep -e 'brew' -q || {
         printf 'Error: Homebrew environmental verification failed; Halting.\n' 1>&2
         return 2
     }
-    shift 1
 
     export HOMEBREW_NO_AUTO_UPDATE='1'
     export HOMEBREW_NO_ANALYTICS='1'

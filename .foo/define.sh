@@ -2,7 +2,7 @@ printf 'Working...\n' && {
 
     test -n "${1}" || {
         set 'brew'
-        printf "Warning: Missing argument; Defaulting to 'brew'.\\n" 1>&2
+        printf "Warning: Missing argument; Defaulting to 'brew'.\\n"
     }
     
     while test "${#}" -ge '1'; do

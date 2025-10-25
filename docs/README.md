@@ -11,7 +11,7 @@ With the goal to circumvent Homebrew's innate security concerns using universall
 
 #### installation:
 
-MacOS comes pre-installed with an older version of git, which may be used to install the current version of Werbly. This is the most recommended method, as not only will you get the current version, but you will also need to be able to do at least this much if you are to operate Werbly and Homebrew. You may also choose to download Werbly as a '.zip' or '.tar.gz' archive from the website directly, which can be useful for downloading a specific release.
+MacOS comes pre-installed with an older version of git, which may be used to install the current version of Werbly. You may alternatively choose to download Werbly as a '.zip' or '.tar.gz' archive from the website directly, which can be useful for downloading a specific release.
 
 - To download via Git, run (where \<pathname> is the desired destination):
 
@@ -39,7 +39,7 @@ To confirm this, call `werb` without any arguments: You should see a response.
 
 #### removal:
 
-To remove Werbly, simply delete the 'werbly' folder and remove the line fetch from your shell profile. Be sure to unapply any casks first (as the symlinks will no longer work).
+To remove Werbly, simply delete the 'werbly' folder and remove the fetch line from your shell profile (e.g. `{ werblyPath="<path>" && . <path>; }`). Be sure to unapply any homebrew apps first (as said symlinks will no longer work).
 
 #### changing versions:
 
@@ -67,5 +67,5 @@ For any further questions or concerns regarding supported versions, or how to re
 
 ### Legal
 
-Werbly is part of the public domain, permitting unrestricted access and usage to and of itself.
+Werbly is dedicated to the public domain, permitting unrestricted access and usage to and of itself.
 For details, please refer to [docs/LICENSE.txt](https://github.com/atlairovikin/werbly/blob/main/LICENSE.txt)
