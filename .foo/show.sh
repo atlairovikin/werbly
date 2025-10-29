@@ -7,9 +7,9 @@ printf 'Working...\n' && {
     }
     printf '%s\n' "--- Werbly's Sandbox Folder ---"
     ls -a "${1}"
-    printf '---+---\n%s\n' "--- User's Applications Folder ---"
+    printf '%s\n%s\n' '---+---' "--- User's Applications Folder ---"
     ls -a "${HOME}/Applications"
-    printf '---+---\n'
+    printf '%s\n' '---+---'
 
 } && printf 'Done!\n'
 return 0
