@@ -1,6 +1,6 @@
 ------------------------------------------------------------------------
 
-werb { abort | help | [un]install | [un]apply <app> | [de]init | show | get <directory> | man | exit }:
+werb { abort | help | [un]install | [un]apply <app> | [de]init | show | man | exit }:
 
     abort:
         undefines werb
@@ -13,15 +13,12 @@ werb { abort | help | [un]install | [un]apply <app> | [de]init | show | get <dir
 
     [un]apply <app>:
         Either applies or unapplies an application from homebrew as <app> (as shown with `werb show`).
-    
+
     [de]init:
         Either initializes or deinitializes the shell environment as nessesary to contain homebrew while using it.
-    
+
     show:
         Shows contents of the sandbox directory. This can be used to know what to input into `werb [un]apply`.
-
-    get <directory>:
-        Fetches a previous version of werbly's sandbox contents. <directory> should be the directory to the old werbly's main folder.
 
     man:
         Opens a pager on brew's manual as raw text. Note that the manpage is formated in markdown, and may appear odd when viewed this way.
