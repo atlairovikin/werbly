@@ -1,6 +1,6 @@
 ------------------------------------------------------------------------
 
-werb { abort | help | [un]install | [un]apply <cask> | [de]init | show | get <directory> | man | exit }:
+werb { abort | help | [un]install | [un]apply <app> | [de]init | show | get <directory> | man | exit }:
 
     abort:
         undefines werb
@@ -11,8 +11,8 @@ werb { abort | help | [un]install | [un]apply <cask> | [de]init | show | get <di
     [un]install:
         Either installs or uninstalls homebrew into/from an isolated directory.
 
-    [un]apply <cask>:
-        Either applies or unapplies an application from homebrew as <cask> (as shown with `werb show`).
+    [un]apply <app>:
+        Either applies or unapplies an application from homebrew as <app> (as shown with `werb show`).
     
     [de]init:
         Either initializes or deinitializes the shell environment as nessesary to contain homebrew while using it.
