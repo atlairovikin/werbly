@@ -43,13 +43,12 @@ To remove Werbly, simply delete the 'werbly' folder and remove the fetch line fr
 
 #### changing versions:
 
-- from the new version, run:
+- Take the old werbly's sandbox directory and move it to the same place in the new werbly.
+  - Said sandbox folder is `werbly/bar`.
+    - If the sandbox folder is `werbly/the_brewery`, you will need to rename it to `werby/bar`.
 
-```
-werb fetch <path_to_old_Werbly>
-```
-
-And you, should there have been no errors, now can remove the old version and its contents manually. If there were errors, follow the instructions given before refering to [docs/SUPPORT.md](https://github.com/atlairovikin/werbly/blob/main/docs/SUPPORT.md).
+And you, should there have been no errors, now can remove the old version and its contents manually. If there were errors, refer to
+[docs/SUPPORT.md](https://github.com/atlairovikin/werbly/blob/main/docs/SUPPORT.md).
 
 ---
 
@@ -63,9 +62,11 @@ Thank you!
 
 ### Security
 
-For any further questions or concerns regarding supported versions, or how to report a vulnerability, please refer to [docs/SECURITY.md](https://github.com/atlairovikin/werbly/blob/main/SECURITY.md)
+For any further questions or concerns regarding supported versions, or how to report a vulnerability, please refer to
+[docs/SECURITY.md](https://github.com/atlairovikin/werbly/blob/main/SECURITY.md)
 
 ### Legal
 
 Werbly is dedicated to the public domain, permitting unrestricted access and usage to and of itself.
-For details, please refer to [docs/LICENSE.txt](https://github.com/atlairovikin/werbly/blob/main/LICENSE.txt)
+For details, please refer to
+[docs/LICENSE.txt](https://github.com/atlairovikin/werbly/blob/main/LICENSE.txt)

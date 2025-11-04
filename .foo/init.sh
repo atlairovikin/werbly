@@ -1,7 +1,6 @@
 printf 'Working...\n' && {
 
-    set "${werblyPath}/bar"
-    test -d "${1}/homebrew" || {
+    test -d "${werblyPath}/bar/homebrew" || {
         printf 'Error: Cannot find homebrew; Halting.\n' 1>&2
         return 1
     }
@@ -18,7 +17,7 @@ printf 'Working...\n' && {
     export HOMEBREW_CASK_OPTS="--appdir=${1} --fontdir=${1}"
 
     printf 'Please hold...\n'
-    set "$(brew config)" "${1}"
+    set "$(brew config)"
     {
         printf '%s\n' "${1}" | grep -e 'HOMEBREW_NO_AUTO_UPDATE' -q
         printf '%s\n' "${1}" | grep -e 'HOMEBREW_NO_ANALYTICS' -q
@@ -27,7 +26,7 @@ printf 'Working...\n' && {
         printf 'Error: Homebrew environmental verification failed; Halting.' 1>&2
         return 3
     }
-    shift 2
+    shift 1
 
 } && printf 'Done!\n'
 return 0

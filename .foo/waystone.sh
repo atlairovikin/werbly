@@ -17,7 +17,7 @@ werb () {
         define|undefine|apply|unapply)
             . "${werblyPath}/.foo/${_werb}.sh" "${@}";;
         # for old/renamed commands (since initial release)
-        uninit|list|fetch)
+        uninit|list|fetch|get)
             . "${werblyPath}/.foo/_${_werb}.sh";;
         *)
             printf 'Error: Unknown argument; Halting.\n' 1>&2

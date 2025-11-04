@@ -1,2 +1,2 @@
-printf 'Error: The command `werb fetch` no longer exists; Use `werb get` instead.\n'
+printf 'Error: The command `werb fetch` no longer exists.\n'
 return 0
