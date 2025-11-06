@@ -1,6 +1,7 @@
 printf 'Working...\n' && {
 
-    test -d "${werblyPath}/bar/homebrew" || {
+    set "${werblyPath}/bar"
+    test -d "${1}/homebrew" || {
         printf 'Error: Cannot find homebrew; Halting.\n' 1>&2
         return 1
     }
