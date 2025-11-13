@@ -1,6 +1,6 @@
 ------------------------------------------------------------------------
 
-werb { abort | help | [un]install | [un]apply <app> | [de]init | show | man | exit }:
+werb { abort | help | [un]install | [un]define <formula> | [un]apply <app> | [de]init | show | man | exit }:
 
     abort:
         undefines werb
@@ -10,6 +10,9 @@ werb { abort | help | [un]install | [un]apply <app> | [de]init | show | man | ex
 
     [un]install:
         Either installs or uninstalls homebrew into/from an isolated directory.
+
+    [un]define <formula>:
+        Either defines or undefines a command from homebrew as <formula>.
 
     [un]apply <app>:
         Either applies or unapplies an application from homebrew as <app> (as shown with `werb show`).
@@ -24,6 +27,6 @@ werb { abort | help | [un]install | [un]apply <app> | [de]init | show | man | ex
         Opens a pager on brew's manual as raw text. Note that the manpage is formated in markdown, and may appear odd when viewed this way.
 
     exit:
-        undefines werb and unsets any related environmental commands/variables, including `brew`.
+        undefines werb and unsets any related environmental commands/variables, including `brew`. Note this does not undefine any formulae set using `werb define`.
 
 ------------------------------------------------------------------------
