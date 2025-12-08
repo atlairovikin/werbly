@@ -9,4 +9,4 @@ all:
 	|| touch $(PROFILE); \
 	grep -Fq $(CMDLN) $(PROFILE) \
 	|| printf '\n%s\n' $(CMDLN) >> $(PROFILE); \
-	} && printf '%s\n' 'Done!'
+	} && printf 'Done!\n'
