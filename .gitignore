@@ -1,6 +1,3 @@
 !.gitignore
 .DS_Store
 bar/
-
-# listed for pre-v2 portability
-the_brewery/
