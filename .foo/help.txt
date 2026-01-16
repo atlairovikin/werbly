@@ -3,10 +3,10 @@
 werb { abort | help | [un]install | [un]define <formula> | [un]apply <app> | [de]init | show | man | exit }:
 
     abort:
-        undefines werb
+        Undefines `werb`.
 
     help:
-        show this message
+        Show this message.
 
     [un]install:
         Either installs or uninstalls homebrew into/from an isolated directory.
@@ -28,5 +28,8 @@ werb { abort | help | [un]install | [un]define <formula> | [un]apply <app> | [de
 
     exit:
         undefines werb and unsets any related environmental commands/variables, including `brew`. Note this does not undefine any formulae set using `werb define`.
+
+    perm-define-all:
+        permanently defines brew and all installed formulae by modifing the current user's PATH by editing the `~/.profile` file.
 
 ------------------------------------------------------------------------

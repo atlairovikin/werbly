@@ -6,18 +6,19 @@ werb () {
         printf 'Aborted!\n'
         return 0
     fi
+    test -n "${werblyPath+set}" || export 'werblyPath'="${HOME}/werbly"
     _werb="${1}" && shift 1
     case "${_werb}" in
         '')
             printf 'Here!\n';;
-        help)
+        'help')
             cat "${werblyPath}/.foo/help.txt";;
-        install|uninstall|init|deinit|show|man|exit)
+        'install'|'uninstall'|'init'|'deinit'|'show'|'man'|'exit'|'perm-define-all')
             . "${werblyPath}/.foo/${_werb}.sh";;
-        define|undefine|apply|unapply)
+        'define'|'undefine'|'apply'|'unapply')
             . "${werblyPath}/.foo/${_werb}.sh" "${@}";;
         # for old/renamed commands (since initial release)
-        uninit|list|fetch|get)
+        'uninit'|'list'|'fetch'|'get')
             . "${werblyPath}/.foo/_${_werb}.sh";;
         *)
             printf 'Error: Unknown argument; Halting.\n' 1>&2
