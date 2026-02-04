@@ -11,7 +11,7 @@ With the goal to circumvent Homebrew's innate security concerns using universall
 
 #### installation:
 
-MacOS comes pre-installed with an older version of git, which may be used to install the current version of Werbly. You may alternatively choose to download Werbly as a '.zip' or '.tar.gz' archive from the website directly, which can be useful for downloading a specific release.
+MacOS comes pre-installed with an older version of git, which may be used to install the current version of Werbly. You may alternatively choose to download Werbly as a '.zip' or '.tar.gz' archive from the website directly, which can be useful for downloading a specific release. Note this and other guides only cover the current release.
 
 - To download via Git, run (where \<pathname> is the desired destination):
 
