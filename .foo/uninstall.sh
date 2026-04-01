@@ -10,7 +10,7 @@ printf 'Working...\n' && {
         set '0' "${@}"
     else 
         unset -v 'POSIXLY_CORRECT'
-        set '1' "${1}"
+        set '1' "${@}"
     fi
 
     cd "${1}"

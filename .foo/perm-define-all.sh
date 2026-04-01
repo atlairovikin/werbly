@@ -1,6 +1,5 @@
 printf 'Working...\n' && {
-    
-    
+
     set "${HOME}/.profile" "{ export 'PATH'=\"${werblyPath}/bar/homebrew/bin:\${PATH}\"; }"
 
     test -f "${1}" || touch "${1}"
