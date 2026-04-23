@@ -39,7 +39,7 @@ To confirm this, call `werb` without any arguments: You should see a response.
 
 #### removal:
 
-To remove Werbly, simply delete the 'werbly' folder and remove the fetch line from your shell profile (e.g. `{ werblyPath="<path>" && . <path>; }`). Be sure to unapply any homebrew apps first (as said symlinks will no longer work).
+To remove Werbly, simply delete the 'werbly' folder and remove the fetch line from your shell profile (e.g. `{ werblyPath="<path>" && . <path>; }`). Be sure to unapply any homebrew apps/casks first (as said symlinks will no longer work).
 
 #### changing versions:
 

@@ -33,3 +33,10 @@ Most notable changes:
 - `werb` `fetch`, `list`, and `uninit` now return their new commands
 - Improved overall code readability
 - other minor changes that I am failing to recall (sorry)
+
+## 2.2.0 (pending)
+
+Most notable changes:
+
+- touched up code
+- added `perm-define-all` which appends a line to `.profile` that automatically sources heombrew's formulas

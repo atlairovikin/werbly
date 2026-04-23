@@ -1,34 +1,33 @@
 printf 'Working...\n' && {
 
-    test -n "${1}" || {
+    [ -n "$1" ] || {
         printf 'Error: Missing argument; Halting.\n' 1>&2
         return 1
     }
-    test -d "${werblyPath}/bar" || {
+    [ -d "${werblyPath}/bar" ] || {
         printf 'Error: Cannot find sandbox directory; Halting.\n' 1>&2
         return 2
     }
 
-    while test "${#}" -ge '1'; do
+    while [ "$#" -ge '1' ]; do
         (
             set "${1%.app}.app" "${HOME}/Applications"
-            if test -e "${werblyPath}/bar/${1}"; then
-            if test ! -e "${2}/${1}"; then
-                ln -s -- "${werblyPath}/bar/${1}" "${2}/$(basename "${1}")"
+            if [ -e "${werblyPath}/bar/${1}" ]; then
+                if [ ! -e "${2}/${1}" ]; then
+                    ln -s -- "${werblyPath}/bar/${1}" "${2}/$(basename "$1")"
+                else
+                    printf '%s\n' "Warning: [${1}] is already applied; Skipping..."
+                    false
+                fi
             else
-                printf '%s\n' "Warning: [${1}] is already applied; Skipping..."
+                printf '%s\n' "Warning: [${1}] does not exist; Skipping..."
                 false
-            fi
-            else
-            printf '%s\n' "Warning: [${1}] does not exist; Skipping..."
-            false
             fi
         )
         shift 1
     done
 
-    printf 'User applications folder, post-apply:\n' && \
+    printf 'User applications folder, post-application:\n' && \
         ls -a -- "${HOME}/Applications"
 
 } && printf 'Done!\n'
-return 0
