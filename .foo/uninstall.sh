@@ -15,8 +15,10 @@ printf 'Working...\n' && {
 
     cd "$1"
     if [ -e '.uninstall_brew.sh' ]; then
+        # if already installed
         /bin/bash '.uninstall_brew.sh' --path homebrew
         set "$?" "$@"
+        rm -f './.uninstall_brew.sh'
     else
         [ -e 'uninstall.sh' ] || \
 	    #"https://docs.brew.sh/Installation":
@@ -26,15 +28,14 @@ printf 'Working...\n' && {
         set "$?" "$@"
         rm -f './uninstall.sh'
     fi
+
+    [ "$2" == '0' ] || \
+        export 'POSIXLY_CORRECT'='1'
     [ "$1" == '0' ] || {
-        printf 'Warning: Uninstall script aborted; Halting.\n' >&2
+        printf 'Error: Uninstall script aborted; Halting.\n' >&2
         return 2
     }
-    shift 1
-
-    [ "$1" == '0' ] || \
-        export 'POSIXLY_CORRECT'='1'
-    shift 1
+    shift 2
 
     printf '%s\n' 'Sandbox folder, post-uninstall:' && \
         ls -a .

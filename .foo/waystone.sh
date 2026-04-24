@@ -13,9 +13,9 @@ werb () {
             printf 'Here!\n';;
         'help')
             cat "${werblyPath}/.foo/help.txt";;
-        'install'|'uninstall'|'init'|'deinit'|'show'|'man'|'exit'|'perm-define-all')
+        'install'|'uninstall'|'init'|'deinit'|'show'|'man'|'exit')
             . "${werblyPath}/.foo/${_werb}.sh";;
-        'define'|'undefine'|'apply'|'unapply')
+        'define'|'undefine'|'apply'|'unapply'|'perm-define-all')
             . "${werblyPath}/.foo/${_werb}.sh" "$@";;
         # for renamed/removed commands (since initial release)
         'uninit'|'list'|'fetch'|'get')

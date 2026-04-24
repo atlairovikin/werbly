@@ -13,7 +13,7 @@ printf 'Working...\n' && {
 	#"https://docs.brew.sh/Installation":
     mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 	#.
-    printf 'Sandbox folder, post-install:\n' && \
+    printf 'Sandbox folder, post-installation:\n' && \
         ls -a .
     {
         [ -d "$2" ] && cd "$2"

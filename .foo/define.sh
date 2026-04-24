@@ -3,6 +3,7 @@ printf 'Working...\n' && {
     [ -n "$1" ] || {
         set 'brew'
         printf '%s\n' "Warning: Missing argument; Defaulting to 'brew'."
+        false
     }
     
     while [ "$#" -ge '1' ]; do

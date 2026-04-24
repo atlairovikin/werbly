@@ -1,6 +1,6 @@
 ------------------------------------------------------------------------
 
-werb { abort | help | [un]install | [un]define <formula> | [un]apply <app> | [de]init | show | man | exit }:
+werb { abort | help | [un]install | [un]define <formula> | [un]apply <app> | [de]init | show | man | exit | perm-define-all <file> }:
 
     abort:
         Undefines `werb`.
@@ -29,7 +29,7 @@ werb { abort | help | [un]install | [un]define <formula> | [un]apply <app> | [de
     exit:
         undefines werb and unsets any related environmental commands/variables, including `brew`. Note this does not undefine any formulae set using `werb define`.
 
-    perm-define-all:
-        permanently defines brew and all installed formulae by modifing the current user's PATH by editing the `~/.profile` file.
+    perm-define-all <file>:
+        permanently defines brew and all installed formulae by modifing the current user's PATH via (the shell profile) <file>. <file> defualts to `~/.profile` if no argument is provided.
 
 ------------------------------------------------------------------------

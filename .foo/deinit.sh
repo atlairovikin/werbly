@@ -8,25 +8,13 @@ printf 'Working...\n' && {
 
     unset -v 'HOMEBREW_NO_AUTO_UPDATE' 'HOMEBREW_NO_ANALYTICS' 'HOMEBREW_CASK_OPTS'
 
-    printf 'Please hold...\n'
-    set "$(brew config)" "$1"
-    {
-        printf '%s\n' "$1" | grep -e 'HOMEBREW_NO_AUTO_UPDATE' -qv
-        printf '%s\n' "$1" | grep -e 'HOMEBREW_NO_ANALYTICS' -qv
-        printf '%s\n' "$1" | grep -e 'HOMEBREW_CASK_OPTS' -qv
-    } || {
-        printf 'Error: Homebrew environmental verification failed; Halting.\n' >&2
-        return 2
-    }
-    shift 2
-
     set "$(alias)"
-    printf '%s\n' "$1" | grep -e 'brew' -q &&
+    printf '%s\n' "$1" | grep -e 'brew' -q && \
         werb undefine brew >/dev/null
     set "$(alias)"
     printf '%s\n' "$1" | grep -e 'brew' -qv || {
         printf 'Error: Shell environmental verification failed; Halting.\n' >&2
-        return 3
+        return 2
     }
     shift 1
 
