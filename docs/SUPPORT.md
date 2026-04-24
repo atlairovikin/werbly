@@ -1,4 +1,4 @@
-## Support
+# Support
 
 If you are encountering issues, please refer to `docs/troubleshooting.md`.
 

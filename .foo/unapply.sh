@@ -1,6 +1,6 @@
 printf 'Working...\n' && {
 
-    [ -n "${1}" ] || {
+    [ -n "$1" ] || {
         printf 'Error; Missing argument; Halting.\n' >&2
         return 1
     }

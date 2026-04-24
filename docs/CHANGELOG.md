@@ -30,7 +30,7 @@ The first official release.
 - Improved overall code readability.
 - Other minor changes.
 
-## 2.2.0 (pending)
+## 2.2.0 (pending release)
 
 - Touched up code, and clarified some print statements.
 - Added `werb perm-define-all` which appends a line to your shell profile that automatically sources heombrew's formulas, and updated `werb help` to reflect such.
