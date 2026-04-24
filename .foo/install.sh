@@ -1,7 +1,7 @@
 printf 'Working...\n' && {
 
     set "${werblyPath}/bar" "${PWD}"
-    test ! -d "${1}/homebrew" || {
+    [ ! -d "${1}/homebrew" ] || {
         printf '%s\n' "Error: Homebrew directory [${1}/homebrew] already exists; Halting." >&2
         return 1
     }

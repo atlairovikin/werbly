@@ -1,6 +1,6 @@
 printf 'Working...\n' && {
 
-    test -n "$1" || {
+    [ -n "$1" ] || {
         set 'brew'
         printf "Warning: Missing argument; Defaulting to 'brew'.\n" >&2
     }

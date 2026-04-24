@@ -17,7 +17,7 @@ werb () {
             . "${werblyPath}/.foo/${_werb}.sh";;
         'define'|'undefine'|'apply'|'unapply')
             . "${werblyPath}/.foo/${_werb}.sh" "$@";;
-        # for old/renamed commands (since initial release)
+        # for renamed/removed commands (since initial release)
         'uninit'|'list'|'fetch'|'get')
             . "${werblyPath}/.foo/_${_werb}.sh";;
         *)

@@ -1,11 +1,11 @@
 printf 'Working...\n' && {
 
     [ -n "$1" ] || {
-        printf 'Error: Missing argument; Halting.\n' 1>&2
+        printf 'Error: Missing argument; Halting.\n' >&2
         return 1
     }
     [ -d "${werblyPath}/bar" ] || {
-        printf 'Error: Cannot find sandbox directory; Halting.\n' 1>&2
+        printf 'Error: Cannot find sandbox directory; Halting.\n' >&2
         return 2
     }
 

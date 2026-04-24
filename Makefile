@@ -5,7 +5,7 @@ WERBLY := '$(HOME)/werbly'
 CMDLN := '{ export "werblyPath"="$(WERBLY)" && . "$${werblyPath}/.foo/waystone.sh"; }'
 
 all:
-	@{ test -f $(PROFILE) \
+	@{ [ -f $(PROFILE) ] \
 	|| touch $(PROFILE); \
 	grep -Fq $(CMDLN) $(PROFILE) \
 	|| printf '\n%s\n' $(CMDLN) >> $(PROFILE); \

@@ -13,7 +13,7 @@ printf 'Working...\n' && {
         set '1' "$@"
     fi
 
-    cd "${1}"
+    cd "$1"
     if [ -e '.uninstall_brew.sh' ]; then
         /bin/bash '.uninstall_brew.sh' --path homebrew
         set "$?" "$@"
@@ -26,7 +26,7 @@ printf 'Working...\n' && {
         set "$?" "$@"
         rm -f './uninstall.sh'
     fi
-    test "$1" == '0' || {
+    [ "$1" == '0' ] || {
         printf 'Warning: Uninstall script aborted; Halting.\n' >&2
         return 2
     }
@@ -39,7 +39,7 @@ printf 'Working...\n' && {
     printf '%s\n' 'Sandbox folder, post-uninstall:' && \
         ls -a .
     {
-        test -d "$2" && cd "$2"
+        [ -d "$2" ] && cd "$2"
     } || cd "$HOME"
     shift 2
 
