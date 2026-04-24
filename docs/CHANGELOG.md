@@ -8,8 +8,6 @@ The first official release.
 
 ## 2.0.0
 
-Most notable changes:
-
 - No longer hails for confirmation (as it was overkill). This effects:
   - installation/uninstallation of homebrew
   - applying/unapplying homebrew-installed applications
@@ -19,24 +17,23 @@ Most notable changes:
 - Added the `werb abort` and `werb exit` commands.
 - Commands now inform you when they start.
 - Werbly now only exports one variable to environment (for internal use): `werblyPath`.
-  - The command `werbly exit` now unsets said variable
+  - The command `werb exit` now unsets said variable.
 - Reduced overhead.
 
 ## 2.1.0
 
-Most notable changes:
-
-- `werb apply <app>` now checks for existance of <app> first
-- removed `werb get` as it did not work and was also overkill
-  - added instructions to 'docs/README.md' to compensate
-- `werb show` the user's application folder in addition the the sandbox folder
-- `werb` `fetch`, `list`, and `uninit` now return their new commands
-- Improved overall code readability
-- other minor changes that I am failing to recall (sorry)
+- `werb apply <app>` now checks for existance of <app> first.
+- Removed `werb get` as it did not work and was also overkill.
+  - Added instructions to 'docs/README.md' to compensate.
+- `werb show` the user's application folder in addition the the sandbox folder.
+- `werb` `fetch`, `list`, and `uninit` now return their new commands.
+- Improved overall code readability.
+- Other minor changes.
 
 ## 2.2.0 (pending)
 
-Most notable changes:
-
-- touched up code
-- added `perm-define-all` which appends a line to `.profile` that automatically sources heombrew's formulas
+- Touched up code, and clarified some print statements.
+- Added `werb perm-define-all` which appends a line to your shell profile that automatically sources heombrew's formulas, and updated `werb help` to reflect such.
+- Added aditional information to 'docs/troubleshooting.md'.
+- Modified `werb uninstall` so that it returns you to your original directory before exiting in case of error.
+- Other minor changes.
