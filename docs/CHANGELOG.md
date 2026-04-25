@@ -34,6 +34,6 @@ The first official release.
 
 - Touched up code, and clarified some print statements.
 - Added `werb perm-define-all` which appends a line to your shell profile that automatically sources heombrew's formulas, and updated `werb help` to reflect such.
-- Added aditional information to 'docs/troubleshooting.md'.
-- Modified `werb uninstall` so that it returns you to your original directory before exiting in case of error.
+- Updated docs.
+- Modified `werb uninstall` so that it returns you to your original directory before exiting in case of an error.
 - Other minor changes.

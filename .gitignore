@@ -1,5 +1,8 @@
+# Always include this file:
 !.gitignore
 
+# Exclude MacOS metadata file:
 .DS_Store
 
+# Exclude Werbly's sandbox directory:
 bar/
