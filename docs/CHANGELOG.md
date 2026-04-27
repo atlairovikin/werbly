@@ -36,4 +36,5 @@ The first official release.
 - Added `werb perm-define-all` which appends a line to your shell profile that automatically sources heombrew's formulas, and updated `werb help` to reflect such.
 - Updated docs.
 - Modified `werb uninstall` so that it returns you to your original directory before exiting in case of an error.
+- Modified `werb man` to actually use `man`, and to look for Homebrew's actuall ".ssl" manpage files.
 - Other minor changes.

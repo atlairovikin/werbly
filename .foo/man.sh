@@ -1,11 +1,12 @@
 printf 'Working...\n' && {
 
-    set "${werblyPath}/bar/homebrew/docs/Manpage.md"
-    [ -e "$1" ] || {
-        printf '%s\n' "Error: Manual at [${1}] does not exist; Halting." >&2
-        return 1
-    }
-    less -R "$1"
-    shift 1
+    _manpath="$MANPATH"
+    export 'MANPATH'="${werblyPath}/bar/homebrew/share/man"
+
+    [ -n "$*" ] || set -- '-k' '.'
+    man "$@" | less -RS
+
+    export 'MANPATH'="$_manpath"
+    unset -v '_manpath'
 
 } && printf 'Done!\n'

@@ -23,7 +23,7 @@ printf 'Working...\n' && {
         shift 1
     done
 
-    printf 'User applications folder, post-unapply:\n' && \
+    printf 'User applications folder, post-unapplication:\n' && \
         ls -a -- "${HOME}/Applications"
 
 } && printf 'Done!\n'

@@ -5,13 +5,13 @@ With the goal to circumvent Homebrew's innate security concerns using universall
 
 ## Management
 
-> Note that werbly's command line is `werb` ('brew' spelt backwards).
+> Note that werbly's command line is `werb` ("brew" spelt backwards).
 
 > For more information on managing Werbly, see [docs/troubleshooting.md][additional].
 
 #### Installation:
 
-MacOS comes pre-installed with an older version of git, which may be used to install the current version of Werbly. You may alternatively choose to download Werbly as a '.zip' or '.tar.gz' archive from the website directly, which can be useful for downloading a specific release. Note this and other guides only cover the current release.
+MacOS comes pre-installed with an older version of git, which may be used to install the current version of Werbly. You may alternatively choose to download Werbly as a ".zip" or ".tar.gz" archive from the website directly, which can be useful for downloading a specific release. Note this and other guides only cover the current release.
 
 * To download via Git, run (where \<pathname\> is the desired destination):
   ```
@@ -50,14 +50,12 @@ Thank you!
 
 ### Security
 
-For any further questions or concerns regarding supported versions, or how to report a vulnerability, please refer to
-[docs/SECURITY.md][security]
+For any further questions or concerns regarding supported versions, or how to report a vulnerability, please refer to [docs/SECURITY.md][security].
 
 ### Legal (or, the lack thereof)
 
 Werbly is dedicated to the public domain, permitting unrestricted access and usage to and of itself.
-For details, please refer to
-[docs/LICENSE.txt][license]
+For details, please refer to [docs/LICENSE.txt][license].
 
 ---
 

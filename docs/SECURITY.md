@@ -8,5 +8,5 @@ Similar to Homebrew, Werbly is rolling release: Only the current release is acti
 
 ## Reporting a Vulnerability
 
-To report a vulnerability, please email me at `retry-atom-afar@duck.com` using the subject 'Vulnerability Report'.
+To report a vulnerability, please email me at "retry-atom-afar@duck.com" using the subject "Vulnerability Report".
 You can expect to get an update on the matter at any point within a business week.
