@@ -61,5 +61,5 @@ For details, please refer to [docs/LICENSE.txt][license].
 
 [additional]: https://github.com/atlairovikin/werbly/blob/main/docs/troubleshooting.md
 [support]: https://github.com/atlairovikin/werbly/blob/main/docs/SUPPORT.md
-[security]: https://github.com/atlairovikin/werbly/blob/main/SECURITY.md
-[license]: https://github.com/atlairovikin/werbly/blob/main/LICENSE.txt
+[security]: https://github.com/atlairovikin/werbly/blob/main/docs/SECURITY.md
+[license]: https://github.com/atlairovikin/werbly/blob/main/docs/LICENSE.txt
